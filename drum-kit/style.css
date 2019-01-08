@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.keys {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+      to bottom,
+      rgba(17, 17, 17, 0.65) 0%,
+      rgba(5, 5, 5, 0.6) 100%
+    ),
+    url(chemistry.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid white;
+  margin: 5px;
+  width: 80px;
+  align-items: flex-start;
+  color: white;
+  padding-left: 3px;
+  padding: 10px;
+}
+
+kbd {
+    line-height: 70%;
+  font-weight: 900;
+  font-size: 38px;
+}
+
+.sound {
+}
