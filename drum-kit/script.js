@@ -78,7 +78,7 @@ keys.addEventListener('transitionend', ({
     target,propertyName
 }) => {
     console.log(target);
-    if (propertyName !== 'tranform') return;
+    // if (propertyName !== 'tranform') return;
     target.classList.remove('playing');
     
 
