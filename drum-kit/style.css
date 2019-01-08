@@ -33,6 +33,7 @@ body {
   color: white;
   padding-left: 3px;
   padding: 10px;
+  transition:1s;
 }
 
 kbd {
@@ -41,5 +42,6 @@ kbd {
   font-size: 38px;
 }
 
-.sound {
+.playing{
+  transform: scale(1.19);
 }

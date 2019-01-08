@@ -61,12 +61,25 @@ function createMarkdown() {
     document.body.appendChild(fragment.content);
 }
 
-window.addEventListener("keydown",event=>{
-    
+createMarkdown();
+
+window.addEventListener("keydown", event => {
+    const key = document.querySelector(`div[data-key="${event.keyCode}"]`);
     const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-    console.log(audio);
+    if (!audio) return;
+    audio.currentTime = 0;
     audio.play();
+    key.classList.add('playing');
+    
+
 });
 
+keys.addEventListener('transitionend', ({
+    target,propertyName
+}) => {
+    console.log(target);
+    if (propertyName !== 'tranform') return;
+    target.classList.remove('playing');
+    
 
-createMarkdown();
+})
