@@ -51,15 +51,22 @@ let keys = document.querySelector(".keys");
 function createMarkdown() {
     let fragment = document.createElement("template");
     data.map(item => {
-        console.log(item);
         keys.innerHTML += `<div class="key" data-key="${item.keyCode}">
         <kbd>${item.key}</kbd>
         <span class="sound">${item.event}</span>
     </div>`;
-        fragment.innerHTML += `<audio data-key="${item.keyCode}" src="sounds/${item.event}.wav"></audio>`;
+        fragment.innerHTML += `<audio data-key="${item.keyCode}" src="audio/${item.event}.wav"></audio>`;
     });
     document.body.appendChild(keys);
     document.body.appendChild(fragment.content);
 }
+
+window.addEventListener("keydown",event=>{
+    
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    console.log(audio);
+    audio.play();
+});
+
 
 createMarkdown();
