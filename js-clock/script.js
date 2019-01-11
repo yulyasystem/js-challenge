@@ -2,6 +2,10 @@ let secondHand = document.querySelector('.second-hand');
 let minuteHand = document.querySelector('.min-hand');
 let hourHand = document.querySelector('.hour-hand');
 
+let h3 = document.querySelector(".text");
+text = h3.innerHTML;
+const DELAY = 1000;
+
 function setDate() {
     const now = new Date();
     const sec = now.getSeconds();
@@ -17,4 +21,9 @@ function setDate() {
 
 }
 
-setInterval(setDate, 1000);
+setInterval(setDate, DELAY);
+setInterval(() => {
+   
+    text = text[text.length - 1] + text.substring(0, text.length - 1);
+    h3.innerHTML = `${text}`;
+}, 200);
