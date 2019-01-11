@@ -11,13 +11,14 @@ body {
     flex: 1;
     height: 100vh;
     align-items: center;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-around;
 }
-.text{
-    font-size:50px;
-    color:white;
-    position:absolute;
+
+.text {
+    font-size: 60px;
+    color: white;
+    position: absolute;
 }
 
 .clock {
@@ -28,7 +29,6 @@ body {
     margin: 50px auto;
     position: relative;
     padding: 2rem;
-    box-shadow: inset 0px 0px 89px -14px rgba(108, 138, 212, 1);
 }
 
 .clock-face {
@@ -41,7 +41,7 @@ body {
 
 .hand {
     width: 50%;
-    height: 6px;
+    height: 4px;
     background: white;
     position: absolute;
     top: 50%;

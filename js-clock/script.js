@@ -5,6 +5,7 @@ let hourHand = document.querySelector('.hour-hand');
 let h3 = document.querySelector(".text");
 text = h3.innerHTML;
 const DELAY = 1000;
+const TEXT_DELAY = 100;
 
 function setDate() {
     const now = new Date();
@@ -23,7 +24,6 @@ function setDate() {
 
 setInterval(setDate, DELAY);
 setInterval(() => {
-   
     text = text[text.length - 1] + text.substring(0, text.length - 1);
     h3.innerHTML = `${text}`;
-}, 200);
+}, TEXT_DELAY);
